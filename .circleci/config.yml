@@ -13,11 +13,10 @@ jobs:
     steps:
       - run:
           echo World
- # workflows define the order in which jobs are run
 workflows:
   default:
     jobs:
       - print_hello
       - print_world:
-        requires:
-          - print_hello
+          requires:
+            - print_hello
